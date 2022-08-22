@@ -22,6 +22,10 @@ Route::middleware(['auth'])->group(function () {
         return view('pages.dashboard');
     })->name('dashboard');
 
+    Route::get('/location', function () {
+        return view('pages.location');
+    })->name('location');
+
     Route::get('/helpers', function () {
         return view('pages.helpers');
     })->name('helpers');
