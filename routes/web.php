@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HelperArrayController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,9 +27,11 @@ Route::middleware(['auth'])->group(function () {
         return view('pages.location');
     })->name('location');
 
-    Route::get('/helpers', function () {
-        return view('pages.helpers');
-    })->name('helpers');
+    // Route::get('/helpers', function () {
+    //     return view('pages.helpers');
+    // })->name('helpers');
+    Route::get('/helpers', [HelperArrayController::class, "index"])->name('helpers');
+
 });
 
 
