@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FakerController;
 use App\Http\Controllers\HelperArrayController;
 use Illuminate\Support\Facades\Route;
 
@@ -34,6 +35,10 @@ Route::middleware(['auth'])->group(function () {
 
 });
 
+# Usando o FAker PHP
+Route::prefix('faker')->group(function () { 
+    Route::get('/usuario', [ FakerController::class, 'usuario'])->name('faker.usuario');
+});
 
 
 require __DIR__.'/auth.php';
