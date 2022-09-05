@@ -18,6 +18,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/app', function () {
+    $laravel = app();
+    return ["version" => $laravel::VERSION];
+});
+
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', function () {
