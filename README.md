@@ -6,4 +6,4 @@
 ## Atividades desenvolvidas
 - FakerPHP, criar dados falsos: [Ver tutorial](https://www.youtube.com/watch?v=AeRgitoHzv8)
 - Arr:: manipular Arrays: [Ver Tutorial](https://www.youtube.com/watch?v=XtqSBkmvVGc)
-
+- Laravel Sail SSL: [Ver Tutorial](https://www.youtube.com/watch?v=3GiWzvk74kU)
