@@ -471,6 +471,6 @@ class HelperArrayController extends Controller
         // last
 
 
-        return view('pages.helpers', compact('resultados', 'descricao'));
+        return view('pages.helpers.arrays', compact('resultados', 'descricao'));
     }
 }

@@ -25,7 +25,7 @@
             </header>
 
             <!-- Page Content -->
-            <main>
+            <main class="bg-zinc-900 min-h-screen">
                 {{ $slot }}
             </main>
         </div>

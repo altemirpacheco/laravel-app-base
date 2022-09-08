@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\FakerController;
 use App\Http\Controllers\HelperArrayController;
+use App\Http\Controllers\HelperPathController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,10 +34,9 @@ Route::middleware(['auth'])->group(function () {
         return view('pages.location');
     })->name('location');
 
-    // Route::get('/helpers', function () {
-    //     return view('pages.helpers');
-    // })->name('helpers');
-    Route::get('/helpers', [HelperArrayController::class, "index"])->name('helpers');
+    Route::get('/helpers/array', [HelperArrayController::class, "index"])->name('helpers.array');
+    Route::get('/helpers/path', [HelperPathController::class, "index"])->name('helpers.path');
+    Route::get('/helpers/path/teste', [HelperPathController::class, "indexDD"]);
 
 });
 
