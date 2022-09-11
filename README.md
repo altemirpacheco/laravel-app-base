@@ -3,7 +3,12 @@
 - Autor: [Urnau](https://www.linkedin.com/in/urnau/)
 
 
+## Objetivo
+Criar um repositório com fins educativo para estimular e facilitar o uso do Laravel em aplicações através de conhecimentos sendo apresentados em vídeos na prática e por fim disponibilizando os códigos desenvolvidos.
+
+
 ## Atividades desenvolvidas
 - FakerPHP, criar dados falsos: [Ver tutorial](https://www.youtube.com/watch?v=AeRgitoHzv8)
 - Arr:: manipular Arrays: [Ver Tutorial](https://www.youtube.com/watch?v=XtqSBkmvVGc)
 - Laravel Sail SSL: [Ver Tutorial](https://www.youtube.com/watch?v=3GiWzvk74kU)
+- Path Helper, usando helpers para saber a localização da aplicação: [Ver Tutorial](https://youtu.be/BsWj7IGCl-w)
