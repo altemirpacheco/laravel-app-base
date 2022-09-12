@@ -1,5 +1,6 @@
 <?php
 
+use App\Commands\GitCommand;
 use App\Http\Controllers\FakerController;
 use App\Http\Controllers\HelperArrayController;
 use App\Http\Controllers\HelperPathController;
@@ -23,7 +24,20 @@ Route::get('/app', function () {
     $laravel = app();
     return ["version" => $laravel::VERSION];
 });
-
+Route::prefix('git')->group(function () {
+    Route::get('/status', function () {
+        return response()->json(['resultado' => (new GitCommand())->status()]);
+    });
+    Route::get('/pull', function () {
+        return response()->json(['resultado' => (new GitCommand())->pull()[0]]);
+    });
+    Route::get('/add/all', function () {
+        return response()->json(['resultado' => (new GitCommand())->addAll()[0]]);
+    });
+    Route::get('/commit', function () {
+        return response()->json(['resultado' => (new GitCommand())->commit()[0]]);
+    });
+});
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', function () {
@@ -34,10 +48,11 @@ Route::middleware(['auth'])->group(function () {
         return view('pages.location');
     })->name('location');
 
-    Route::get('/helpers/array', [HelperArrayController::class, "index"])->name('helpers.array');
-    Route::get('/helpers/path', [HelperPathController::class, "index"])->name('helpers.path');
-    Route::get('/helpers/path/teste', [HelperPathController::class, "indexDD"]);
-
+    Route::prefix('helpers')->group(function () {
+        Route::get('/array', [HelperArrayController::class, "index"])->name('helpers.array');
+        Route::get('/path', [HelperPathController::class, "index"])->name('helpers.path');
+        Route::get('/path/teste', [HelperPathController::class, "indexDD"]);
+    });
 });
 
 # Usando o FAker PHP
