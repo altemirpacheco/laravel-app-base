@@ -69,12 +69,18 @@ class GitCommand
 
     public function commit(string $msg = null):array{
         if(empty($msg)){
-            $msg = "'teste'";
-            // $msg = "__modificado_em_".now()->toDateTimeString().".";
+            $msg = "__modificado em ".now()->toDateTimeString().".";
         }
-        // dd([self::COMMAND, 'commit', '-m', $msg]);
-        $process = new ProcessOSService(["git", "commit", "-m", "teste"]);
-        // $process = new ProcessOSService([self::COMMAND, 'commit', 'message="teste"']);
+        /**
+         * Author identity unknown *** 
+         * Please tell me who you are. 
+         * Run 
+         * git config --global user.email "you@example.com" 
+         * git config --global user.name "Your Name" 
+         * to set your account's default identity. 
+         * Omit --global to set the identity only in this repository.
+         */
+        $process = new ProcessOSService([self::COMMAND, "commit", "-m", $msg]);
         if($result = $process->execute()){
             if(empty($result))
                 throw new Exception("Sem resultado!");            
@@ -95,5 +101,45 @@ class GitCommand
         }
     }
 
+    public function setConfigEmail(){
+        $user_email = env("GIT_EMAIL", null);
+        $process = new ProcessOSService([self::COMMAND, "config", "--global", "user.email", $user_email]);
+        if($result = $process->execute()){
+            return [
+                [$result], 'ok'
+            ];
+        }else{
+            throw new Exception("Não executou!");
+        }
+    }
+
+    public function setConfigName(){
+        $user_name = env("GIT_NAME", null);
+        $process = new ProcessOSService([self::COMMAND, "config", "--global", "user.name", $user_name]);
+        if($result = $process->execute()){
+            return [
+                [$result], 'ok'
+            ];
+        }else{
+            throw new Exception("Não executou!");
+        }
+    }
+
+    public function push():array{
+        $process = new ProcessOSService([self::COMMAND, 'push']);
+        if($result = $process->execute()){
+            if(empty($result))
+                throw new Exception("Sem resultado!");            
+            $result = explode("\n", $result);
+            $result = array_values(
+            array_filter($result, fn($item) => $item !== "")
+            );
+            return [
+                $result, "atualizacoes"
+            ];
+        }else{
+            throw new Exception("Não executou!");
+        }
+    }
     
 }

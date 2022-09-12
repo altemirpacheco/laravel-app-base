@@ -37,6 +37,15 @@ Route::prefix('git')->group(function () {
     Route::get('/commit', function () {
         return response()->json(['resultado' => (new GitCommand())->commit()[0]]);
     });
+    Route::get('/config/set/email', function () {
+        return response()->json(['resultado' => (new GitCommand())->setConfigEmail()[0]]);
+    });
+    Route::get('/config/set/name', function () {
+        return response()->json(['resultado' => (new GitCommand())->setConfigName()[0]]);
+    });
+    Route::get('/push', function () {
+        return response()->json(['resultado' => (new GitCommand())->push()[0]]);
+    });
 });
 
 Route::middleware(['auth'])->group(function () {
