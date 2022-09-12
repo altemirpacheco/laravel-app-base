@@ -7,4 +7,8 @@ Se WSL é preciso gerar uma chave dentro do wsl
 Andicionar sua chave em [GitHub -> Configurações -> SSH](https://github.com/settings/keys)
 > ssh-add ~/.ssh/id_ed25519
 
+Checar no .git/config o endereço de url do remote
+
+
+
 https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
