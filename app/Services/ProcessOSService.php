@@ -24,4 +24,12 @@ class ProcessOSService
             throw new Exception($this->process->getErrorOutput());
         return $this->process->getOutput();
     }
+
+    public function executeWithPty(){
+        $this->process->setPty(true)->setTimeout($this->timeout_seconds);
+        $this->process->run();
+        if($this->process->getErrorOutput())
+            throw new Exception($this->process->getErrorOutput());
+        return $this->process->getOutput();
+    }
 }
