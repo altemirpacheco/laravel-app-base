@@ -126,10 +126,10 @@ class GitCommand
     }
 
     public function push():array{
-        $process = new ProcessOSService([self::COMMAND, 'push']);
-        if($result = $process->execute()){
+        $process = new ProcessOSService([self::COMMAND, 'push'] );
+        if($result = $process->executeWithPty()){
             if(empty($result))
-                throw new Exception("Sem resultado!");            
+                throw new Exception("Sem resultado!");
             $result = explode("\n", $result);
             $result = array_values(
             array_filter($result, fn($item) => $item !== "")
