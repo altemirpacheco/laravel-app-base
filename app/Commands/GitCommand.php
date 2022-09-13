@@ -35,7 +35,7 @@ class GitCommand
         try {
             $process->execute();
             return [
-                ["Todos os itens foram adiconados para serem comitados."], "ok"
+                ["Todos os itens foram adicionados para serem comitados."], "ok"
             ];
         } catch (\Throwable $th) {
             throw new Exception( "Erro na execução!");

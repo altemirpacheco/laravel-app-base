@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "95f06706-05e2-4844-bbb5-37af736db014",
+		"name": "Laravel Api Github Resources",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Git Status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/git/status",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"git",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Git Pull",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/git/pull",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"git",
+						"pull"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Git Add All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/git/add/all",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"git",
+						"add",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Git Commit",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/git/commit",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"git",
+						"commit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Git Push",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/git/push",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"git",
+						"push"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://laravel.test"
+		}
+	]
+}
