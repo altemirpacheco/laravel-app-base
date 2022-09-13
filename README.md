@@ -12,3 +12,6 @@ Criar um repositório com fins educativo para estimular e facilitar o uso do Lar
 - Arr:: manipular Arrays: [Ver Tutorial](https://www.youtube.com/watch?v=XtqSBkmvVGc)
 - Laravel Sail SSL: [Ver Tutorial](https://www.youtube.com/watch?v=3GiWzvk74kU)
 - Path Helper, usando helpers para saber a localização da aplicação: [Ver Tutorial](https://youtu.be/BsWj7IGCl-w)
+- Laravel Executando Comandos no Sistema Operacional: [Ver Tutorial](https://youtu.be/boaxl2wTdRY)
+    - [Ver Documentação](./docs/os-process.md)
+    - [Postman Collection](./docs/Laravel%20Api%20Github%20Resources.postman_collection.json)
