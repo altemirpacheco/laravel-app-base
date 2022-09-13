@@ -28,6 +28,7 @@ class ProcessOSService
     public function executeWithPty(){
         $this->process->setPty(true)->setTimeout($this->timeout_seconds);
         $this->process->run();
+        $this->process->wait();
         if($this->process->getErrorOutput())
             throw new Exception($this->process->getErrorOutput());
         return $this->process->getOutput();
