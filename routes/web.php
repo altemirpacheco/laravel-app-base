@@ -24,6 +24,7 @@ Route::get('/app', function () {
     $laravel = app();
     return ["version" => $laravel::VERSION];
 });
+/** Rotas criadas para vídeo do Laravel realizando Git Pull */
 Route::prefix('git')->group(function () {
     Route::get('/status', function () {
         return response()->json(['resultado' => (new GitCommand())->status()]);

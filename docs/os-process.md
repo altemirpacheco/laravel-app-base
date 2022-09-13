@@ -1,10 +1,14 @@
-Vamos utilizar a depedencia do Symfony
+## Dependências
+- Ter o git instalado no ambiente ou no container
+
+- Vamos utilizar a depedência do Symfony. Por padrão ela está em todos os projetos Laravel.
 vendor/symfony/process/Process.php
 
-1º
+## Comandos 
+1º Entrar em .git/config e checar o apontamento ao respositório. Se estiver começando com https://github.com/... alterar conforme exemplo:
 https://github.com/user/repo.git -> git@github.com:USERNAME/REPOSITORY.git
 
-2º Testar conexão
+2º Testar conexão, deve retornar um erro
 ssh -T git@github.com
 
 3º Gerar chave
@@ -27,3 +31,10 @@ cat ~/.ssh/id_ed25519.pub
 
 10º Testar conexão
 ssh -T git@github.com
+
+## Materias de apoio
+[Gerando uma nova chave SSH e adicionando-a ao agente SSH](https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+
+[Erro: permissão negada (publickey)](https://docs.github.com/pt/authentication/troubleshooting-ssh/error-permission-denied-publickey)
+
+[GitHub configurações de SSH da conta](https://github.com/settings/keys)
