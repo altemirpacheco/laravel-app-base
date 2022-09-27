@@ -17,11 +17,6 @@
                     </x-nav-link>
                 </div>
 
-                {{-- <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('helpers.array')" :active="request()->routeIs('helpers.array')">
-                        {{ __('Helpers') }}
-                    </x-nav-link>
-                </div> --}}
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('location')" :active="request()->routeIs('location')">
                         {{ __('Location') }}
@@ -45,6 +40,9 @@
                             </x-dropdown-link>
                             <x-dropdown-link :href="route('helpers.path')">
                                 {{ __('Path') }}
+                            </x-dropdown-link>
+                            <x-dropdown-link :href="route('helpers.datetime')">
+                                {{ __('Datetime') }}
                             </x-dropdown-link>
                         </x-slot>
                     </x-dropdown>

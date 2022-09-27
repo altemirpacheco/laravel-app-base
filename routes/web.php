@@ -3,6 +3,7 @@
 use App\Commands\GitCommand;
 use App\Http\Controllers\FakerController;
 use App\Http\Controllers\HelperArrayController;
+use App\Http\Controllers\HelperDatetimeController;
 use App\Http\Controllers\HelperPathController;
 use Illuminate\Support\Facades\Route;
 
@@ -62,6 +63,7 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/array', [HelperArrayController::class, "index"])->name('helpers.array');
         Route::get('/path', [HelperPathController::class, "index"])->name('helpers.path');
         Route::get('/path/teste', [HelperPathController::class, "indexDD"]);
+        Route::get('/datetime', [HelperDatetimeController::class, "index"])->name('helpers.datetime');
     });
 });
 
