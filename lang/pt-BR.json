@@ -6,5 +6,6 @@
     "Location": "Local",
     "Arrays": "Listas (Array)",
     "Path": "Caminho (Path)",
-    "Datetime": "Data e Hora"
+    "Datetime": "Data e Hora",
+    "String": "Texto (Str)"
 }

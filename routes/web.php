@@ -5,6 +5,7 @@ use App\Http\Controllers\FakerController;
 use App\Http\Controllers\HelperArrayController;
 use App\Http\Controllers\HelperDatetimeController;
 use App\Http\Controllers\HelperPathController;
+use App\Http\Controllers\HelperStrController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -65,6 +66,7 @@ Route::middleware(['auth'])->group(function() {
         Route::get('/path', [HelperPathController::class, 'index'])->name('helpers.path');
         Route::get('/path/teste', [HelperPathController::class, 'indexDD']);
         Route::get('/datetime', [HelperDatetimeController::class, 'index'])->name('helpers.datetime');
+        Route::get('/str', [HelperStrController::class, 'index'])->name('helpers.str');
     });
 });
 

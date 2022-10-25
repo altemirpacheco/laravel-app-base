@@ -44,6 +44,9 @@
                             <x-dropdown-link :href="route('helpers.datetime')">
                                 {{ __('Datetime') }}
                             </x-dropdown-link>
+                            <x-dropdown-link :href="route('helpers.str')">
+                                {{ __('String') }}
+                            </x-dropdown-link>
                         </x-slot>
                     </x-dropdown>
                 </div>
